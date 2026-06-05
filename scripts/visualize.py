@@ -61,3 +61,4 @@ if __name__ == "__main__":
     plot_segments_pie(rfm)
     plot_top_customers(rfm)
     print("All charts created successfully.")
+    
