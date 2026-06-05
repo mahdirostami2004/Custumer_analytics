@@ -32,7 +32,7 @@ It identifies valuable customer groups such as **Champions**, **Loyal**, **Poten
 - Matplotlib
 
 
-# 🚀 How to Run
+##🚀 How to Run
 
 1. Clone the repository
 `git clone https://github.com/mahdirostami2004/Custumer_analytics.git`
@@ -59,4 +59,4 @@ RFM scores: Saved as data/rfm_scores.csv
 Charts: Saved in the reports/ folder
 
 ##📚 Dataset Source
-UCI Online Retail — Transaction data from a UK online retailer (2010–2011).
+[UCI Online Retail](https://archive.ics.uci.edu/dataset/352/online+retail) — Transaction data from a UK online retailer (2010–2011).
