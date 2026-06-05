@@ -57,13 +57,13 @@ cd Custumer_analytic
 ### 3. Run the pipeline
 `python scripts/run_all.py`
 
-##📈 Results
+## 📈 Results
 
-    Cleaned data saved as data/cleaned_data.csv
+**Cleaned data saved as data/cleaned_data.csv**
 
-    RFM scores saved as data/rfm_scores.csv
+**RFM scores saved as data/rfm_scores.csv**
 
-    Charts saved in the reports/ folder
-##📚 Dataset Source
+**Charts saved in the reports/ folder**
+## 📚 Dataset Source
 
 [UCI Online Retail](https://archive.ics.uci.edu/ml/datasets/online+retail) – Transaction data from a UK online retailer (2010–2011).
