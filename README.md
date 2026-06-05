@@ -32,26 +32,27 @@ It identifies valuable customer groups such as **Champions**, **Loyal**, **Poten
 - Matplotlib
 
 
-#🚀 How to Run
+# 🚀 How to Run
 
 1. Clone the repository
-'git clone https://github.com/mahdirostami2004/Custumer_analytics.git
+`git clone https://github.com/mahdirostami2004/Custumer_analytics.git`
 cd Custumer_analytics
 
-3. Install dependencies
-'pip install -r requirements.txt
+2. Install dependencies
+`pip install -r requirements.txt`
 
-5. Add the dataset
+3. Add the dataset
 Download online_retail.csv from UCI and place it inside the data/ folder.
 
-7. Run the pipeline
+4. Run the pipeline
 To run all scripts at once:
-'python3 scripts/run_all.py
+`python3 scripts/run_all.py`
 Or run step by step:
-'''python scripts/clean_data.py
+```
+python scripts/clean_data.py
 python scripts/rfm_analysis.py
 python scripts/visualize.py
-
+```
 ##📈 Results
 Cleaned data: Saved as data/cleaned_data.csv
 RFM scores: Saved as data/rfm_scores.csv
