@@ -31,23 +31,31 @@ It identifies valuable customer groups such as **Champions**, **Loyal**, **Poten
 - NumPy
 - Matplotlib
 
-## 📁 Project Structure
-```text
-.
-├── data/           # Raw and cleaned data (CSV)
-├── reports/        # Generated charts (PNG)
-├── scripts/        # Python scripts
-│   ├── clean_data.py
-│   ├── rfm_analysis.py
-│   ├── visualize.py
-│   └── run_all.py
-├── requirements.txt
-└── README.md
-'''
 
-## 🚀 How to Run
+#🚀 How to Run
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/mahdirostami2004/Custumer_analytics.git
+1. Clone the repository
+'git clone https://github.com/mahdirostami2004/Custumer_analytics.git
 cd Custumer_analytics
+
+3. Install dependencies
+'pip install -r requirements.txt
+
+5. Add the dataset
+Download online_retail.csv from UCI and place it inside the data/ folder.
+
+7. Run the pipeline
+To run all scripts at once:
+'python3 scripts/run_all.py
+Or run step by step:
+'''python scripts/clean_data.py
+python scripts/rfm_analysis.py
+python scripts/visualize.py
+
+##📈 Results
+Cleaned data: Saved as data/cleaned_data.csv
+RFM scores: Saved as data/rfm_scores.csv
+Charts: Saved in the reports/ folder
+
+##📚 Dataset Source
+UCI Online Retail — Transaction data from a UK online retailer (2010–2011).
