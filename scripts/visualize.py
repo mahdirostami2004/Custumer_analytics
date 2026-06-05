@@ -1,6 +1,5 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 import os
 
 def load_rfm(filepath="data/rfm_scores.csv"):
@@ -11,14 +10,20 @@ def plot_rfm_distribution(rfm, save_dir="reports"):
     
     fig, axes = plt.subplots(1, 3, figsize=(15, 4))
     
-    sns.histplot(rfm['Recency'], bins=30, kde=True, ax=axes[0])
+    axes[0].hist(rfm['Recency'], bins=30, edgecolor='black')
     axes[0].set_title('Recency Distribution (days since last purchase)')
+    axes[0].set_xlabel('Days')
+    axes[0].set_ylabel('Frequency')
     
-    sns.histplot(rfm['Frequency'], bins=30, kde=True, ax=axes[1])
+    axes[1].hist(rfm['Frequency'], bins=30, edgecolor='black')
     axes[1].set_title('Frequency Distribution (number of orders)')
+    axes[1].set_xlabel('Orders')
+    axes[1].set_ylabel('Frequency')
     
-    sns.histplot(rfm['Monetary'], bins=30, kde=True, ax=axes[2])
+    axes[2].hist(rfm['Monetary'], bins=30, edgecolor='black')
     axes[2].set_title('Monetary Distribution (total spend)')
+    axes[2].set_xlabel('Revenue')
+    axes[2].set_ylabel('Frequency')
     
     plt.tight_layout()
     plt.savefig(f"{save_dir}/rfm_distribution.png", dpi=150)
@@ -37,8 +42,10 @@ def plot_segments_pie(rfm, save_dir="reports"):
 def plot_top_customers(rfm, save_dir="reports"):
     top10 = rfm.nlargest(10, 'Monetary')[['CustomerID', 'Monetary', 'Frequency', 'Segment']]
     plt.figure(figsize=(12, 6))
-    sns.barplot(data=top10, x='CustomerID', y='Monetary', palette='viridis')
+    plt.bar(top10['CustomerID'].astype(str), top10['Monetary'], color='teal')
     plt.title('Top 10 Customers by Monetary Value')
+    plt.xlabel('Customer ID')
+    plt.ylabel('Total Spend')
     plt.xticks(rotation=45)
     plt.tight_layout()
     plt.savefig(f"{save_dir}/top10_customers.png", dpi=150)
@@ -54,4 +61,3 @@ if __name__ == "__main__":
     plot_segments_pie(rfm)
     plot_top_customers(rfm)
     print("All charts created successfully.")
-    
