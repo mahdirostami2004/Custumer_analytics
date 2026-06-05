@@ -23,13 +23,13 @@ By analyzing the RFM scores, we categorize customers into actionable segments:
 
 ## 📊 Key Visualizations
 
-### 📈 RFM Metrics Distribution
+###  RFM Metrics Distribution
 ![RFM Distribution](reports/rfm_distribution.png)
 
-### 🍰 Customer Segment Proportions
+###  Customer Segment Proportions
 ![Segments Pie](reports/segments_pie.png)
 
-### 💰 Top 10 Customers by Monetary Value
+###  Top 10 Customers by Monetary Value
 ![Top Customers](reports/top10_customers.png)
 
 ---
@@ -48,6 +48,22 @@ By analyzing the RFM scores, we categorize customers into actionable segments:
 ## 🚀 How to Run
 
 ### 1. Clone the repository
-```bash
+```
 git clone https://github.com/mahdirostami2004/Custumer_analytics.git
-cd Custumer_analytics
+cd Custumer_analytic
+```
+### 2. Install dependencies
+`pip install -r requirements.txt`
+### 3. Run the pipeline
+`python scripts/run_all.py`
+
+##📈 Results
+
+    Cleaned data saved as data/cleaned_data.csv
+
+    RFM scores saved as data/rfm_scores.csv
+
+    Charts saved in the reports/ folder
+##📚 Dataset Source
+
+[UCI Online Retail](https://archive.ics.uci.edu/ml/datasets/online+retail) – Transaction data from a UK online retailer (2010–2011).
