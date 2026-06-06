@@ -11,4 +11,4 @@ Place the file `online_retail.csv` inside the `data/` folder.
 1. Create a virtual environment (optional)
    ```bash
    python -m venv venv
-   source venv/bin/activate   # or venv\Scripts\activate on Windows
+   source venv/bin/activate   # or venv\Scripts\activate on WindowsThis is my first PR for Pull Shark
